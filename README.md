@@ -1,12 +1,16 @@
+## 效果预览
+
+[DEMO地址](http://mac-input.mai516.com/)
+
 ## 安装
 
 ```bash
 
-npm install -S vue-mac-address
+npm install -S mac-address-input
 
 # or
 
-yarn add vue-mac-address
+yarn add mac-address-input
 
 ```
 
@@ -17,9 +21,9 @@ yarn add vue-mac-address
 ```javascript
 
 import Vue from 'vue'
-import InputMacAddress from 'vue-mac-address'
+import MacAddressInput from 'mac-address-input'
 
-Vue.use(InputMacAddress)
+Vue.use(MacAddressInput)
 
 ```
 
@@ -31,7 +35,7 @@ Vue.use(InputMacAddress)
   <div class="demo__container">
     请输入电脑MAC地址：<br />
     <div class="input__container">
-      <input-mac-address v-model="macAddress" @change="changeAction" />
+      <mac-address-input v-model="macAddress" @change="changeAction" />
       <span v-if="!isValid" class="error-message">mac地址格式不正确</span>
     </div>
     <button @click="outputHandle" class="btn btn-primary mt40">输出MAC地址</button>
