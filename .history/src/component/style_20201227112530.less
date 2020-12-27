@@ -1,0 +1,39 @@
+.mac-address{
+    &__container{
+        width: 100%;
+        box-sizing: border-box;
+        ul li{
+            padding: 0;
+            margin: 0;
+        }
+    }
+    &__list{
+        width: 100%;
+    }
+    &__inner{
+        width: 20%;
+        padding-left: 20px;
+        list-style: none;
+        display: inline-block;
+        & + li{
+            content: ':';
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+            line-height: 34px;
+        }
+        input{
+            width: 100%;
+            line-height: 34px;
+            height: 34px;
+            padding: 5px 10px;
+            outline: none;
+            border: 1px solid #e6e6e6;
+            border-radius: 2px;
+            &:hover{
+                border-color: blue;
+            }
+        }
+    }
+}
