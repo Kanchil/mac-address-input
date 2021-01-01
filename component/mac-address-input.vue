@@ -37,6 +37,7 @@ export default {
     keydownAction (event, index) {
       switch (event.keyCode) {
         case 8:
+          if (index <= 1) return
           if (!this.macList[index - 1]) {
             this.$refs.input[index - 1].blur()
             this.$refs.input[Math.max(index - 2, 0)].focus()
@@ -52,6 +53,7 @@ export default {
           }
           break
         case 39:
+          if (index >= 6) return
           if (Number(event.target.selectionStart) === (this.macList[index - 1] || '').length) {
             this.$refs.input[index - 1].blur()
             this.$refs.input[Math.max(index)].focus()

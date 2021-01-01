@@ -1,11 +1,12 @@
 {
   "name": "mac-address-input",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "基于 Vue MAC地址输入框",
   "keyword": "vue mac address input",
   "private": false,
   "main": "lib/mac-address-input.umd.min.js",
   "author": "Kanchil",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/Kanchil/mac-address-input.git"
