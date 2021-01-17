@@ -1,6 +1,6 @@
 {
   "name": "mac-address-input",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "基于 Vue MAC地址输入框",
   "keyword": "vue mac address input",
   "private": false,

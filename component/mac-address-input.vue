@@ -62,10 +62,11 @@ export default {
       }
     },
     pasteAction (event) {
+      event.preventDefault()
       const str = event.clipboardData.getData('text').replace(/[^0-9a-fA-F]/g, '').toUpperCase() || ''
       const list = []
       let strTemp = ''
-      for (let i = 0; i < Math.min(str.length, 12); i++) {
+      for (let i = 0; i <= Math.min(str.length, 12); i++) {
         if (i > 0 && i % 2 === 0) {
           list.push(strTemp)
           strTemp = ''
@@ -73,8 +74,7 @@ export default {
         strTemp += str.slice(i, i + 1)
       }
       this.macList = list
-      const focusIndex = Math.min(list.length, 5)
-      this.$refs.input[focusIndex].focus()
+      this.$emit('input', this.arrayToMac(this.macList))
     },
     inputAction (event, index) {
       this.$set(this.macList, index - 1, (this.macList[index - 1] || '').replace(/[^0-9a-fA-F]/g, '').toUpperCase().slice(0, 2))
